@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+    {% block stylesheets %}
+
+        {{parent()}}
+
+        <!-- Custom CSS -->
+        <link href="{{asset('bundles/cleverswarmfrontend/css/modern-business.css')}}" rel="stylesheet">
+    {% endblock %}
+
+    {% block body %}
+
+        {% include'CleversWarmFrontendBundle:Partial:_nav.html.twig' %}
+
+        {% block carousel %}{% endblock %}
+        
+        <!-- Page Content -->
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+
+            {% include'CleversWarmFrontendBundle:Partial:_footer.html.twig' %}
+            
+        </div>
+        <!-- /.container -->
+
+    {% endblock %}
