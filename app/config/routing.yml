@@ -1,0 +1,3 @@
+robotiks_frontend:
+    resource: "@RobotiksFrontendBundle/Resources/config/routing.yml"
+    prefix:   /
