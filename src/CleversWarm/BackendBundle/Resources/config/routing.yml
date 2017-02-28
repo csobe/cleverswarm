@@ -1,0 +1,3 @@
+cleverswarm_backend_index:
+    path:     /
+    defaults: { _controller: CleversWarmBackendBundle:Main:index }

@@ -1,3 +1,7 @@
+clevers_warm_backend:
+    resource: "@CleversWarmBackendBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
 cleverswarm_frontend:
     resource: "@CleversWarmFrontendBundle/Resources/config/routing.yml"
     prefix:   /

@@ -1,0 +1,53 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+	{{parent()}}
+    <!-- Custom CSS -->
+    <link href="{{asset('/bundles/cleverswarmbackend/css/sb-admin.css')}}" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="{{asset('/bundles/cleverswarmbackend/css/plugins/morris.css')}}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{{asset('/bundles/cleverswarmbackend/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block body %}
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+			{% include"CleversWarmBackendBundle:Partial:_navbar.html.twig" %}
+			{% include"CleversWarmBackendBundle:Partial:_sidebar.html.twig" %}
+			
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+				<!-- Page Heading -->
+				<div class="row">
+				    <div class="col-lg-12">
+				        <h1 class="page-header">
+				            {% block h1 %}Pensez au titre h1!{% endblock %} {#<small>Statistics Overview</small>#}
+				        </h1>
+				        <ol class="breadcrumb">
+				            <li class="active">
+				                <i class="fa fa-dashboard"></i> Dashboard
+				            </li>
+				        </ol>
+				    </div>
+				</div>
+				<!-- /.row -->
+
+				{% block content %}
+				{% endblock %}
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+{% endblock %}
