@@ -17,6 +17,8 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new CleversWarm\FrontendBundle\CleversWarmFrontendBundle(),
             new CleversWarm\BackendBundle\CleversWarmBackendBundle(),
+            new CleversWarm\UserBundle\CleversWarmUserBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
