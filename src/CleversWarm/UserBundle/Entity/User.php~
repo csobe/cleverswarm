@@ -42,38 +42,4 @@ class User extends BaseUser
     {
         return $this->id;
     }
-
-    /**
-     * Add remote
-     *
-     * @param \CleversWarm\BackendBundle\Entity\Remote $remote
-     *
-     * @return User
-     */
-    public function addRemote(\CleversWarm\BackendBundle\Entity\Remote $remote)
-    {
-        $this->remotes[] = $remote;
-
-        return $this;
-    }
-
-    /**
-     * Remove remote
-     *
-     * @param \CleversWarm\BackendBundle\Entity\Remote $remote
-     */
-    public function removeRemote(\CleversWarm\BackendBundle\Entity\Remote $remote)
-    {
-        $this->remotes->removeElement($remote);
-    }
-
-    /**
-     * Get remotes
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getRemotes()
-    {
-        return $this->remotes;
-    }
 }

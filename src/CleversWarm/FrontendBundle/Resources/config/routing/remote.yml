@@ -1,0 +1,9 @@
+cleverswarm_frontend_remote_index:
+    path:     /
+    defaults: { _controller: CleversWarmFrontendBundle:Remote:index }
+    methods:  GET
+
+cleverswarm_frontend_remote_show:
+    path:     /{id}/show
+    defaults: { _controller: CleversWarmFrontendBundle:Remote:show }
+    methods:  GET

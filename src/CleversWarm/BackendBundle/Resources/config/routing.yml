@@ -1,3 +1,7 @@
+cleverswarm_backend_remote:
+    resource: "@CleversWarmBackendBundle/Resources/config/routing/remote.yml"
+    prefix:   /remote
+
 cleverswarm_backend_index:
     path:     /
     defaults: { _controller: CleversWarmBackendBundle:Main:index }

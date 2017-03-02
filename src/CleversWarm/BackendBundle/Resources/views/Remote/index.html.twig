@@ -1,0 +1,44 @@
+{% extends "CleversWarmBackendBundle::layout.html.twig" %}
+
+{% block h1 %}Remote index{% endblock %}
+
+{% block content %}
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Link</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for remote in remotes %}
+            <tr>
+                <td><a href="{{ path('cleverswarm_backend_remote_show', { 'id': remote.id }) }}">{{ remote.id }}</a></td>
+                <td>{{ remote.name }}</td>
+                <td>{{ remote.description }}</td>
+                <td>{{ remote.link }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('cleverswarm_backend_remote_show', { 'id': remote.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('cleverswarm_backend_remote_edit', { 'id': remote.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('cleverswarm_backend_remote_new') }}">Create a new remote</a>
+        </li>
+    </ul>
+{% endblock %}

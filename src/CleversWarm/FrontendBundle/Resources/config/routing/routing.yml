@@ -1,7 +1,0 @@
-cleverswarm_frontend_remote_index:
-    path:     /
-    defaults: { _controller: CleversWarmFrontendBundle:Remote:index }
-
-cleverswarm_frontend_remote_view:
-    path:     /view
-    defaults: { _controller: CleversWarmFrontendBundle:Remote:view }

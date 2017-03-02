@@ -3,5 +3,5 @@ cleverswarm_frontend_index:
     defaults: { _controller: CleversWarmFrontendBundle:Main:index }
 
 cleverswarm_frontend_remote:
-    resource: "@CleversWarmFrontendBundle/Resources/config/routing/routing.yml"
+    resource: "@CleversWarmFrontendBundle/Resources/config/routing/remote.yml"
     prefix:   /remote
