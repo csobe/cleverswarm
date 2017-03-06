@@ -44,7 +44,6 @@ class Remote
 
     /**
      * @ORM\ManyToOne(targetEntity="CleversWarm\UserBundle\Entity\User", inversedBy="remotes")
-     * @ORM\JoinColumn(nullable=false)
      */
     private $user;    
 

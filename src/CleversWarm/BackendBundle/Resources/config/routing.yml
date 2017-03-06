@@ -5,3 +5,7 @@ cleverswarm_backend_remote:
 cleverswarm_backend_index:
     path:     /
     defaults: { _controller: CleversWarmBackendBundle:Main:index }
+
+cleverswarm_backend_post:
+    resource: "@CleversWarmBackendBundle/Resources/config/routing/post.yml"
+    prefix:   /post

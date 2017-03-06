@@ -24,9 +24,9 @@ class Post
     /**
      * @var string
      *
-     * @ORM\Column(name="title", type="string", length=255, unique=true)
+     * @ORM\Column(name="name", type="string", length=255, unique=true)
      */
-    private $title;
+    private $name;
 
     /**
      * @var \DateTime
@@ -73,27 +73,27 @@ class Post
     }
 
     /**
-     * Set title
+     * Set name
      *
-     * @param string $title
+     * @param string $name
      *
      * @return Post
      */
-    public function settitle($title)
+    public function setName($name)
     {
-        $this->title = $title;
+        $this->name = $name;
 
         return $this;
     }
 
     /**
-     * Get title
+     * Get name
      *
      * @return string
      */
-    public function gettitle()
+    public function getName()
     {
-        return $this->title;
+        return $this->name;
     }
 
     /**
@@ -191,30 +191,5 @@ class Post
     {
         return $this->enabled;
     }
-
-    /**
-     * Set user
-     *
-     * @param \CleversWarm\UserBundle\Entity\User $user
-     *
-     * @return Post
-     */
-    public function setUser(\CleversWarm\UserBundle\Entity\User $user = null)
-    {
-        $this->user = $user;
-
-        $user->addPost($this);
-
-        return $this;
-    }
-
-    /**
-     * Get user
-     *
-     * @return \CleversWarm\UserBundle\Entity\User
-     */
-    public function getUser()
-    {
-        return $this->user;
-    }
 }
+

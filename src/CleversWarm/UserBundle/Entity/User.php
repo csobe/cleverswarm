@@ -31,7 +31,12 @@ class User extends BaseUser
     /**
      * @ORM\OneToMany(targetEntity="CleversWarm\BackendBundle\Entity\Remote", mappedBy="user")
      */
-    private $remotes;    
+    private $remotes;
+
+    /**
+     * @ORM\OneToMany(targetEntity="CleversWarm\BackendBundle\Entity\Post", mappedBy="user")
+     */
+    private $posts;    
 
     /**
      * Get id
@@ -75,5 +80,39 @@ class User extends BaseUser
     public function getRemotes()
     {
         return $this->remotes;
+    }
+
+    /**
+     * Add post
+     *
+     * @param \CleversWarm\BackendBundle\Entity\Post $post
+     *
+     * @return User
+     */
+    public function addPost(\CleversWarm\BackendBundle\Entity\Post $post)
+    {
+        $this->posts[] = $post;
+
+        return $this;
+    }
+
+    /**
+     * Remove post
+     *
+     * @param \CleversWarm\BackendBundle\Entity\Post $post
+     */
+    public function removePost(\CleversWarm\BackendBundle\Entity\Post $post)
+    {
+        $this->posts->removeElement($post);
+    }
+
+    /**
+     * Get posts
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPosts()
+    {
+        return $this->posts;
     }
 }
