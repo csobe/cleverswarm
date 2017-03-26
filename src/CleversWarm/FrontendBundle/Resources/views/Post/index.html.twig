@@ -18,7 +18,7 @@
 		        </p>
 		        <p><i class="fa fa-clock-o"></i> Posté le {{post.posted|date('d-m-Y à h:m')}}</p>
 		        <hr>
-		        <a href="blog-post.html">
+		        <a href="{{path('cleverswarm_frontend_post_show', { id: post.id} )}}">
 		            <img class="img-responsive img-hover" src="http://placehold.it/900x300" alt="">
 		        </a>
 		        <hr>

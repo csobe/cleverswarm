@@ -57,7 +57,7 @@ class Post
     private $enabled;
 
     /**
-     * @ORM\ManyToOne(targetEntity="CleversWarm\UserBundle\Entity\User", inversedBy="articles")
+     * @ORM\ManyToOne(targetEntity="CleversWarm\UserBundle\Entity\User", inversedBy="posts")
      */
     private $user; 
 
