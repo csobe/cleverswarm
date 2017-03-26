@@ -68,3 +68,6 @@ Enjoy!
 [12]: https://symfony.com/doc/3.2/assetic/asset_management.html
 [13]: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
 # cleverswarm
+
+DoctrineMigration
+FixtureBundle
