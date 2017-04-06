@@ -1,7 +1,7 @@
 cleverswarm_frontend_post_index:
     path:     /
-    defaults: { _controller: CleversWarmFrontendBundle:Post:index }
+    defaults: { _controller: CleverSwarmFrontendBundle:Post:index }
 
 cleverswarm_frontend_post_show:
     path:     /{id}/show
-    defaults: { _controller: CleversWarmFrontendBundle:Post:show }
+    defaults: { _controller: CleverSwarmFrontendBundle:Post:show }

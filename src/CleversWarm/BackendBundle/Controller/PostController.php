@@ -1,8 +1,8 @@
 <?php
 
-namespace CleversWarm\BackendBundle\Controller;
+namespace CleverSwarm\BackendBundle\Controller;
 
-use CleversWarm\BackendBundle\Entity\Post;
+use CleverSwarm\BackendBundle\Entity\Post;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -20,9 +20,9 @@ class PostController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $posts = $em->getRepository('CleversWarmBackendBundle:Post')->findAll();
+        $posts = $em->getRepository('CleverSwarmBackendBundle:Post')->findAll();
 
-        return $this->render('CleversWarmBackendBundle:Post:index.html.twig', array(
+        return $this->render('CleverSwarmBackendBundle:Post:index.html.twig', array(
             'posts' => $posts,
         ));
     }
@@ -34,7 +34,7 @@ class PostController extends Controller
     public function newAction(Request $request)
     {
         $post = new Post();
-        $form = $this->createForm('CleversWarm\BackendBundle\Form\PostType', $post);
+        $form = $this->createForm('CleverSwarm\BackendBundle\Form\PostType', $post);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -46,7 +46,7 @@ class PostController extends Controller
             return $this->redirectToRoute('cleverswarm_backend_post_show', array('id' => $post->getId()));
         }
 
-        return $this->render('CleversWarmBackendBundle:Post:new.html.twig', array(
+        return $this->render('CleverSwarmBackendBundle:Post:new.html.twig', array(
             'post' => $post,
             'form' => $form->createView(),
         ));
@@ -60,7 +60,7 @@ class PostController extends Controller
     {
         $deleteForm = $this->createDeleteForm($post);
 
-        return $this->render('CleversWarmBackendBundle:Post:show.html.twig', array(
+        return $this->render('CleverSwarmBackendBundle:Post:show.html.twig', array(
             'post' => $post,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -73,7 +73,7 @@ class PostController extends Controller
     public function editAction(Request $request, Post $post)
     {
         $deleteForm = $this->createDeleteForm($post);
-        $editForm = $this->createForm('CleversWarm\BackendBundle\Form\PostType', $post);
+        $editForm = $this->createForm('CleverSwarm\BackendBundle\Form\PostType', $post);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
@@ -82,7 +82,7 @@ class PostController extends Controller
             return $this->redirectToRoute('cleverswarm_backend_post_edit', array('id' => $post->getId()));
         }
 
-        return $this->render('CleversWarmBackendBundle:Post:edit.html.twig', array(
+        return $this->render('CleverSwarmBackendBundle:Post:edit.html.twig', array(
             'post' => $post,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

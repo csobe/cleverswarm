@@ -1,6 +1,6 @@
 <?php
 
-namespace CleversWarm\BackendBundle\DependencyInjection;
+namespace CleverSwarm\BackendBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

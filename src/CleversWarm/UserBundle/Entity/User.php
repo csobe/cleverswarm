@@ -1,6 +1,6 @@
 <?php
 
-namespace CleversWarm\UserBundle\Entity;
+namespace CleverSwarm\UserBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  * User
  *
  * @ORM\Table(name="users")
- * @ORM\Entity(repositoryClass="CleversWarm\UserBundle\Repository\UserRepository")
+ * @ORM\Entity(repositoryClass="CleverSwarm\UserBundle\Repository\UserRepository")
  */
 class User extends BaseUser
 {
@@ -29,12 +29,12 @@ class User extends BaseUser
     }
 
     /**
-     * @ORM\OneToMany(targetEntity="CleversWarm\BackendBundle\Entity\Remote", mappedBy="user")
+     * @ORM\OneToMany(targetEntity="CleverSwarm\BackendBundle\Entity\Remote", mappedBy="user")
      */
     private $remotes;
 
     /**
-     * @ORM\OneToMany(targetEntity="CleversWarm\BackendBundle\Entity\Post", mappedBy="user")
+     * @ORM\OneToMany(targetEntity="CleverSwarm\BackendBundle\Entity\Post", mappedBy="user")
      */
     private $posts;    
 
@@ -51,11 +51,11 @@ class User extends BaseUser
     /**
      * Add remote
      *
-     * @param \CleversWarm\BackendBundle\Entity\Remote $remote
+     * @param \CleverSwarm\BackendBundle\Entity\Remote $remote
      *
      * @return User
      */
-    public function addRemote(\CleversWarm\BackendBundle\Entity\Remote $remote)
+    public function addRemote(\CleverSwarm\BackendBundle\Entity\Remote $remote)
     {
         $this->remotes[] = $remote;
 
@@ -65,9 +65,9 @@ class User extends BaseUser
     /**
      * Remove remote
      *
-     * @param \CleversWarm\BackendBundle\Entity\Remote $remote
+     * @param \CleverSwarm\BackendBundle\Entity\Remote $remote
      */
-    public function removeRemote(\CleversWarm\BackendBundle\Entity\Remote $remote)
+    public function removeRemote(\CleverSwarm\BackendBundle\Entity\Remote $remote)
     {
         $this->remotes->removeElement($remote);
     }
@@ -85,11 +85,11 @@ class User extends BaseUser
     /**
      * Add post
      *
-     * @param \CleversWarm\BackendBundle\Entity\Post $post
+     * @param \CleverSwarm\BackendBundle\Entity\Post $post
      *
      * @return User
      */
-    public function addPost(\CleversWarm\BackendBundle\Entity\Post $post)
+    public function addPost(\CleverSwarm\BackendBundle\Entity\Post $post)
     {
         $this->posts[] = $post;
 
@@ -99,9 +99,9 @@ class User extends BaseUser
     /**
      * Remove post
      *
-     * @param \CleversWarm\BackendBundle\Entity\Post $post
+     * @param \CleverSwarm\BackendBundle\Entity\Post $post
      */
-    public function removePost(\CleversWarm\BackendBundle\Entity\Post $post)
+    public function removePost(\CleverSwarm\BackendBundle\Entity\Post $post)
     {
         $this->posts->removeElement($post);
     }

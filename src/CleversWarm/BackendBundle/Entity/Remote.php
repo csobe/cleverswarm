@@ -1,6 +1,6 @@
 <?php
 
-namespace CleversWarm\BackendBundle\Entity;
+namespace CleverSwarm\BackendBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Remote
  *
  * @ORM\Table(name="remote")
- * @ORM\Entity(repositoryClass="CleversWarm\BackendBundle\Repository\RemoteRepository")
+ * @ORM\Entity(repositoryClass="CleverSwarm\BackendBundle\Repository\RemoteRepository")
  */
 class Remote
 {
@@ -43,7 +43,7 @@ class Remote
     private $link;
 
     /**
-     * @ORM\ManyToOne(targetEntity="CleversWarm\UserBundle\Entity\User", inversedBy="remotes")
+     * @ORM\ManyToOne(targetEntity="CleverSwarm\UserBundle\Entity\User", inversedBy="remotes")
      */
     private $user;    
 
@@ -133,11 +133,11 @@ class Remote
     /**
      * Set user
      *
-     * @param \CleversWarm\UserBundle\Entity\User $user
+     * @param \CleverSwarm\UserBundle\Entity\User $user
      *
      * @return Remote
      */
-    public function setUser(\CleversWarm\UserBundle\Entity\User $user)
+    public function setUser(\CleverSwarm\UserBundle\Entity\User $user)
     {
         $this->user = $user;
 
@@ -149,7 +149,7 @@ class Remote
     /**
      * Get user
      *
-     * @return \CleversWarm\UserBundle\Entity\User
+     * @return \CleverSwarm\UserBundle\Entity\User
      */
     public function getUser()
     {

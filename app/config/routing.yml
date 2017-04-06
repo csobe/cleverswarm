@@ -1,13 +1,13 @@
 clevers_warm_user:
-    resource: "@CleversWarmUserBundle/Resources/config/routing.yml"
+    resource: "@CleverSwarmUserBundle/Resources/config/routing.yml"
     prefix:   /user
 
 clevers_warm_backend:
-    resource: "@CleversWarmBackendBundle/Resources/config/routing.yml"
+    resource: "@CleverSwarmBackendBundle/Resources/config/routing.yml"
     prefix:   /admin
 
 cleverswarm_frontend:
-    resource: "@CleversWarmFrontendBundle/Resources/config/routing.yml"
+    resource: "@CleverSwarmFrontendBundle/Resources/config/routing.yml"
     prefix:   /
 
 fos_user_security:

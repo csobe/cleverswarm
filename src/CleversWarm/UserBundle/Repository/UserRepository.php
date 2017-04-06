@@ -1,6 +1,6 @@
 <?php
 
-namespace CleversWarm\UserBundle\Repository;
+namespace CleverSwarm\UserBundle\Repository;
 
 /**
  * UserRepository

@@ -1,6 +1,6 @@
 <?php
 
-namespace CleversWarm\BackendBundle\Entity;
+namespace CleverSwarm\BackendBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Post
  *
  * @ORM\Table(name="post")
- * @ORM\Entity(repositoryClass="CleversWarm\BackendBundle\Repository\PostRepository")
+ * @ORM\Entity(repositoryClass="CleverSwarm\BackendBundle\Repository\PostRepository")
  */
 class Post
 {
@@ -57,7 +57,7 @@ class Post
     private $enabled;
 
     /**
-     * @ORM\ManyToOne(targetEntity="CleversWarm\UserBundle\Entity\User", inversedBy="articles")
+     * @ORM\ManyToOne(targetEntity="CleverSwarm\UserBundle\Entity\User", inversedBy="articles")
      */
     private $user; 
 

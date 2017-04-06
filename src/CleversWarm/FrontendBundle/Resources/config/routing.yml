@@ -1,11 +1,11 @@
 cleverswarm_frontend_index:
     path:     /
-    defaults: { _controller: CleversWarmFrontendBundle:Main:index }
+    defaults: { _controller: CleverSwarmFrontendBundle:Main:index }
 
 cleverswarm_frontend_remote:
-    resource: "@CleversWarmFrontendBundle/Resources/config/routing/remote.yml"
+    resource: "@CleverSwarmFrontendBundle/Resources/config/routing/remote.yml"
     prefix:   /remote
 
 cleverswarm_frontend_post:
-    resource: "@CleversWarmFrontendBundle/Resources/config/routing/post.yml"
+    resource: "@CleverSwarmFrontendBundle/Resources/config/routing/post.yml"
     prefix:   /post

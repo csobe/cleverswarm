@@ -1,6 +1,6 @@
 <?php
 
-namespace CleversWarm\BackendBundle\Repository;
+namespace CleverSwarm\BackendBundle\Repository;
 
 /**
  * PostRepository

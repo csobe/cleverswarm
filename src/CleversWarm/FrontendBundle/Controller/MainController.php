@@ -1,6 +1,6 @@
 <?php
 
-namespace CleversWarm\FrontendBundle\Controller;
+namespace CleverSwarm\FrontendBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -10,9 +10,9 @@ class MainController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $posts = $em->getRepository('CleversWarmBackendBundle:Post')->findAll();
+        $posts = $em->getRepository('CleverSwarmBackendBundle:Post')->findAll();
         
-        return $this->render('CleversWarmFrontendBundle:Main:index.html.twig', array(
+        return $this->render('CleverSwarmFrontendBundle:Main:index.html.twig', array(
             'posts' => $posts,
         ));
     }

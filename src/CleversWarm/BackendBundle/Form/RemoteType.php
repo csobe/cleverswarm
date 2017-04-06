@@ -1,6 +1,6 @@
 <?php
 
-namespace CleversWarm\BackendBundle\Form;
+namespace CleverSwarm\BackendBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -24,7 +24,7 @@ class RemoteType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'CleversWarm\BackendBundle\Entity\Remote'
+            'data_class' => 'CleverSwarm\BackendBundle\Entity\Remote'
         ));
     }
 

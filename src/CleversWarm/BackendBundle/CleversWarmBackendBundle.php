@@ -1,9 +1,9 @@
 <?php
 
-namespace CleversWarm\BackendBundle;
+namespace CleverSwarm\BackendBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class CleversWarmBackendBundle extends Bundle
+class CleverSwarmBackendBundle extends Bundle
 {
 }

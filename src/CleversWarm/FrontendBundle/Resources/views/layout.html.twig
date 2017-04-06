@@ -10,11 +10,11 @@
 
     {% block body %}
 
-        {% include'CleversWarmFrontendBundle:Partial:_nav.html.twig' %}
+        {% include'CleverSwarmFrontendBundle:Partial:_nav.html.twig' %}
 
         {% if app.request.get('_route') == 'cleverswarm_frontend_index' %}
             <!-- Header Carousel -->
-            {% include'CleversWarmFrontendBundle:Partial:_carousel_home.html.twig' %}
+            {% include'CleverSwarmFrontendBundle:Partial:_carousel_home.html.twig' %}
         {% endif %}
         
         <!-- Page Content -->
@@ -27,7 +27,7 @@
                         <h1 class="page-header">{% block h1 %}Titre à définir !{% endblock %}
                             {#<small>Subheading</small>#}
                         </h1>
-                        {% include'CleversWarmFrontendBundle:Partial:_breadcrumb.html.twig' %}
+                        {% include'CleverSwarmFrontendBundle:Partial:_breadcrumb.html.twig' %}
                     </div>
                 </div>
                 <!-- /.row -->
@@ -36,7 +36,7 @@
             {% block content %}
             {% endblock %}
 
-            {% include'CleversWarmFrontendBundle:Partial:_footer.html.twig' %}
+            {% include'CleverSwarmFrontendBundle:Partial:_footer.html.twig' %}
             
         </div>
         <!-- /.container -->

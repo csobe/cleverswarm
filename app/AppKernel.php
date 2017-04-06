@@ -15,9 +15,9 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new CleversWarm\FrontendBundle\CleversWarmFrontendBundle(),
-            new CleversWarm\BackendBundle\CleversWarmBackendBundle(),
-            new CleversWarm\UserBundle\CleversWarmUserBundle(),
+            new CleverSwarm\FrontendBundle\CleverSwarmFrontendBundle(),
+            new CleverSwarm\BackendBundle\CleverSwarmBackendBundle(),
+            new CleverSwarm\UserBundle\CleverSwarmUserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
         ];
 

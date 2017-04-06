@@ -1,24 +1,24 @@
 cleverswarm_backend_remote_index:
     path:     /
-    defaults: { _controller: "CleversWarmBackendBundle:Remote:index" }
+    defaults: { _controller: "CleverSwarmBackendBundle:Remote:index" }
     methods:  GET
 
 cleverswarm_backend_remote_show:
     path:     /{id}/show
-    defaults: { _controller: "CleversWarmBackendBundle:Remote:show" }
+    defaults: { _controller: "CleverSwarmBackendBundle:Remote:show" }
     methods:  GET
 
 cleverswarm_backend_remote_new:
     path:     /new
-    defaults: { _controller: "CleversWarmBackendBundle:Remote:new" }
+    defaults: { _controller: "CleverSwarmBackendBundle:Remote:new" }
     methods:  [GET, POST]
 
 cleverswarm_backend_remote_edit:
     path:     /{id}/edit
-    defaults: { _controller: "CleversWarmBackendBundle:Remote:edit" }
+    defaults: { _controller: "CleverSwarmBackendBundle:Remote:edit" }
     methods:  [GET, POST]
 
 cleverswarm_backend_remote_delete:
     path:     /{id}/delete
-    defaults: { _controller: "CleversWarmBackendBundle:Remote:delete" }
+    defaults: { _controller: "CleverSwarmBackendBundle:Remote:delete" }
     methods:  DELETE

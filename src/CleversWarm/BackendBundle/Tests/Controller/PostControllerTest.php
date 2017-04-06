@@ -1,6 +1,6 @@
 <?php
 
-namespace CleversWarm\BackendBundle\Tests\Controller;
+namespace CleverSwarm\BackendBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

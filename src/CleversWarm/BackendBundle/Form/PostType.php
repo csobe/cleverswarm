@@ -1,6 +1,6 @@
 <?php
 
-namespace CleversWarm\BackendBundle\Form;
+namespace CleverSwarm\BackendBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -26,7 +26,7 @@ class PostType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'CleversWarm\BackendBundle\Entity\Post'
+            'data_class' => 'CleverSwarm\BackendBundle\Entity\Post'
         ));
     }
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace CleversWarm\BackendBundle\Controller;
+namespace CleverSwarm\BackendBundle\Controller;
 
-use CleversWarm\BackendBundle\Entity\Remote;
+use CleverSwarm\BackendBundle\Entity\Remote;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -20,9 +20,9 @@ class RemoteController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $remotes = $em->getRepository('CleversWarmBackendBundle:Remote')->findAll();
+        $remotes = $em->getRepository('CleverSwarmBackendBundle:Remote')->findAll();
 
-        return $this->render('CleversWarmBackendBundle:Remote:index.html.twig', array(
+        return $this->render('CleverSwarmBackendBundle:Remote:index.html.twig', array(
             'remotes' => $remotes,
         ));
     }
@@ -34,7 +34,7 @@ class RemoteController extends Controller
     public function newAction(Request $request)
     {
         $remote = new Remote();
-        $form = $this->createForm('CleversWarm\BackendBundle\Form\RemoteType', $remote);
+        $form = $this->createForm('CleverSwarm\BackendBundle\Form\RemoteType', $remote);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -46,7 +46,7 @@ class RemoteController extends Controller
             return $this->redirectToRoute('cleverswarm_backend_remote_show', array('id' => $remote->getId()));
         }
 
-        return $this->render('CleversWarmBackendBundle:Remote:new.html.twig', array(
+        return $this->render('CleverSwarmBackendBundle:Remote:new.html.twig', array(
             'remote' => $remote,
             'form' => $form->createView(),
         ));
@@ -60,7 +60,7 @@ class RemoteController extends Controller
     {
         $deleteForm = $this->createDeleteForm($remote);
 
-        return $this->render('CleversWarmBackendBundle:Remote:show.html.twig', array(
+        return $this->render('CleverSwarmBackendBundle:Remote:show.html.twig', array(
             'remote' => $remote,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -73,7 +73,7 @@ class RemoteController extends Controller
     public function editAction(Request $request, Remote $remote)
     {
         $deleteForm = $this->createDeleteForm($remote);
-        $editForm = $this->createForm('CleversWarm\BackendBundle\Form\RemoteType', $remote);
+        $editForm = $this->createForm('CleverSwarm\BackendBundle\Form\RemoteType', $remote);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
@@ -82,7 +82,7 @@ class RemoteController extends Controller
             return $this->redirectToRoute('cleverswarm_backend_remote_edit', array('id' => $remote->getId()));
         }
 
-        return $this->render('CleversWarmBackendBundle:Remote:edit.html.twig', array(
+        return $this->render('CleverSwarmBackendBundle:Remote:edit.html.twig', array(
             'remote' => $remote,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

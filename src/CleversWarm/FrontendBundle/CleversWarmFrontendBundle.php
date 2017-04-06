@@ -1,9 +1,9 @@
 <?php
 
-namespace CleversWarm\FrontendBundle;
+namespace CleverSwarm\FrontendBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class CleversWarmFrontendBundle extends Bundle
+class CleverSwarmFrontendBundle extends Bundle
 {
 }
