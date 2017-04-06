@@ -8,24 +8,18 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-        <div class="item active">
-            <div class="fill" style="background-image:url('http://s.hswstatic.com/gif/ai-arms-race-part-2.jpg');"></div>
-            <div class="carousel-caption">
-                <h2>Caption 1</h2>
-            </div>
-        </div>
-        <div class="item">
-            <div class="fill" style="background-image:url('https://venturesafrica.com/wp-content/uploads/2015/09/RobotTakeOverBS.jpg');"></div>
-            <div class="carousel-caption">
-                <h2>Caption 2</h2>
-            </div>
-        </div>
-        <div class="item">
-            <div class="fill" style="background-image:url('http://future.inese.es/wp-content/uploads/2017/02/robot7.jpg');"></div>
-            <div class="carousel-caption">
-                <h2>Caption 3</h2>
-            </div>
-        </div>
+        {% for slide in slides %}
+            {% if loop. first %}
+                <div class="item active">
+            {% else %}
+                <div class="item">
+            {% endif %}
+                    <div class="fill" style="background-image:url('{{slide.img}}');"></div>
+                    <div class="carousel-caption">
+                        <h2>{{slide.caption}}</h2>
+                    </div>
+                </div>
+        {% endfor %}
     </div>
 
     <!-- Controls -->

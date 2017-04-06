@@ -1,0 +1,24 @@
+cleverswarm_backend_slide_index:
+    path:     /
+    defaults: { _controller: "CleverSwarmBackendBundle:Slide:index" }
+    methods:  GET
+
+cleverswarm_backend_slide_show:
+    path:     /{id}/show
+    defaults: { _controller: "CleverSwarmBackendBundle:Slide:show" }
+    methods:  GET
+
+cleverswarm_backend_slide_new:
+    path:     /new
+    defaults: { _controller: "CleverSwarmBackendBundle:Slide:new" }
+    methods:  [GET, POST]
+
+cleverswarm_backend_slide_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CleverSwarmBackendBundle:Slide:edit" }
+    methods:  [GET, POST]
+
+cleverswarm_backend_slide_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CleverSwarmBackendBundle:Slide:delete" }
+    methods:  DELETE
