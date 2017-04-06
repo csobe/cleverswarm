@@ -14,7 +14,7 @@
 		            <a href="{{path('cleverswarm_frontend_post_show', { id: post.id} )}}">{{post.title}}</a>
 		        </h2>
 		        <p class="lead">
-		            par <a href="#">{{post.user}}</a>
+		            par <a href="{{path('cleverswarm_frontend_post_show', { id: post.id} )}}">{{post.user}}</a>
 		        </p>
 		        <p><i class="fa fa-clock-o"></i> Posté le {{post.posted|date('d-m-Y à h:m')}}</p>
 		        <hr>
@@ -22,8 +22,8 @@
 		            <img class="img-responsive img-hover" src="http://placehold.it/900x300" alt="">
 		        </a>
 		        <hr>
-		        <p>{{post.content}}</p>
-		        <a class="btn btn-primary" href="#">Plus <i class="fa fa-angle-right"></i></a>
+		        <p>{{post.content|slice(0,100)}} ...</p>
+		        <a class="btn btn-primary" href="{{path('cleverswarm_frontend_post_show', { id: post.id} )}}">Plus <i class="fa fa-angle-right"></i></a>
 
 		        <hr>
 	        {% endfor %}
