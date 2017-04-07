@@ -24,9 +24,9 @@ class Post
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255, unique=true)
+     * @ORM\Column(name="title", type="string", length=255, unique=true)
      */
-    private $name;
+    private $title;
 
     /**
      * @var \DateTime
@@ -57,10 +57,20 @@ class Post
     private $enabled;
 
     /**
-     * @ORM\ManyToOne(targetEntity="CleverSwarm\UserBundle\Entity\User", inversedBy="articles")
+     * @ORM\ManyToMany(targetEntity="CleverSwarm\BackendBundle\Entity\Category", cascade={"persist"})
+     */
+    private $categories;    
+
+    /**
+     * @ORM\ManyToOne(targetEntity="CleverSwarm\UserBundle\Entity\User", inversedBy="posts")
      */
     private $user; 
 
+    public function __construct()
+    {
+        $this->posted = new \Datetime();
+        $this->enabled = 0;
+    }
 
     /**
      * Get id
@@ -73,27 +83,27 @@ class Post
     }
 
     /**
-     * Set name
+     * Set title
      *
-     * @param string $name
+     * @param string $title
      *
      * @return Post
      */
-    public function setName($name)
+    public function settitle($title)
     {
-        $this->name = $name;
+        $this->title = $title;
 
         return $this;
     }
 
     /**
-     * Get name
+     * Get title
      *
      * @return string
      */
-    public function getName()
+    public function gettitle()
     {
-        return $this->name;
+        return $this->title;
     }
 
     /**
@@ -191,5 +201,30 @@ class Post
     {
         return $this->enabled;
     }
-}
 
+    /**
+     * Set user
+     *
+     * @param \CleverSwarm\UserBundle\Entity\User $user
+     *
+     * @return Post
+     */
+    public function setUser(\CleverSwarm\UserBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        $user->addPost($this);
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \CleverSwarm\UserBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+}

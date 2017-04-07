@@ -1,7 +1,8 @@
-{% extends 'base.html.twig' %}
+{% extends "CleverSwarmBackendBundle::layout.html.twig" %}
 
-{% block body %}
-    <h1>Slide edit</h1>
+{% block h1 %}Category edit{% endblock %}
+
+{% block content %}
 
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
@@ -10,7 +11,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('slide_index') }}">Back to the list</a>
+            <a href="{{ path('cleverswarm_backend_category_index') }}">Back to the list</a>
         </li>
         <li>
             {{ form_start(delete_form) }}

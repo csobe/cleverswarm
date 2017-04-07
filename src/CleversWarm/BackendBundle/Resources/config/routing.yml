@@ -12,4 +12,8 @@ cleverswarm_backend_post:
 
 cleverswarm_backend_slide:
     resource: "@CleverSwarmBackendBundle/Resources/config/routing/slide.yml"
-    prefix:   /slide    
+    prefix:   /slide
+
+clever_swarm_backend_category:
+    resource: "@CleverSwarmBackendBundle/Resources/config/routing/category.yml"
+    prefix:   /category

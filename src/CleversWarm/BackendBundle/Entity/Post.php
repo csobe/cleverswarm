@@ -57,10 +57,20 @@ class Post
     private $enabled;
 
     /**
+     * @ORM\ManyToMany(targetEntity="CleverSwarm\BackendBundle\Entity\Category", cascade={"persist"})
+     */
+    private $categories;    
+
+    /**
      * @ORM\ManyToOne(targetEntity="CleverSwarm\UserBundle\Entity\User", inversedBy="posts")
      */
     private $user; 
 
+    public function __construct()
+    {
+        $this->posted = new \Datetime();
+        $this->enabled = 0;
+    }
 
     /**
      * Get id
@@ -216,5 +226,39 @@ class Post
     public function getUser()
     {
         return $this->user;
+    }
+
+    /**
+     * Add category
+     *
+     * @param \CleverSwarm\BackendBundle\Entity\Category $category
+     *
+     * @return Post
+     */
+    public function addCategory(\CleverSwarm\BackendBundle\Entity\Category $category)
+    {
+        $this->categories[] = $category;
+
+        return $this;
+    }
+
+    /**
+     * Remove category
+     *
+     * @param \CleverSwarm\BackendBundle\Entity\Category $category
+     */
+    public function removeCategory(\CleverSwarm\BackendBundle\Entity\Category $category)
+    {
+        $this->categories->removeElement($category);
+    }
+
+    /**
+     * Get categories
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCategories()
+    {
+        return $this->categories;
     }
 }

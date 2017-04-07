@@ -25,4 +25,15 @@ class PostController extends Controller
         ));
     }
 
+    public function sidebarAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $categories = $em->getRepository('CleverSwarmBackendBundle:Category')->findAll();
+
+        return $this->render('CleverSwarmFrontendBundle:Partial:_sidebar.html.twig', array(
+            'categories' => $categories,
+        ));
+    }    
+
 }
